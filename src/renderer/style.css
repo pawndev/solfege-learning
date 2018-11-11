@@ -1,0 +1,135 @@
+body {
+    padding: 5em;
+  }
+  .bar {
+    position: relative;
+    display: inline-block;
+    width: 12px;
+    height: 32px;
+    margin: 0 12px;
+    margin-bottom: 48px;
+    width: 2px;
+    border-right: 1px solid black;
+  }
+  .debug .bar {
+    outline: 1px solid rgba(255, 0, 0, 0.1);
+  }
+  .bar.double,
+  .bar.end {
+    border-left: 1px solid black;
+  }
+  .bar.end {
+    float: right;
+    border-right-width: 4px;
+    margin-right: 0;
+  }
+  .staff {
+    font-size: 0;
+    background-image: linear-gradient(180deg, #999 0, #999 1px, transparent 1px, transparent 8px, #999 8px, #999 9px, transparent 9px, transparent 16px, #999 16px, #999 17px, transparent 17px, transparent 24px, #999 24px, #999 25px, transparent 25px, transparent 32px, #999 32px, #999 33px, transparent 33px);
+    background-size: 100% 80px;
+  }
+  .staff.debug {
+    background-color: rgba(0, 255, 0, 0.1);
+  }
+  .note {
+    position: relative;
+    display: inline-block;
+    width: 12px;
+    height: 32px;
+    margin: 0 12px;
+    margin-bottom: 48px;
+  }
+  .debug .note {
+    outline: 1px solid rgba(255, 0, 0, 0.1);
+  }
+  .note::before {
+    height: 8px;
+    width: 12px;
+  }
+  .whole.note::before {
+    position: absolute;
+    content: "";
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-left-width: 4px;
+    border-right-width: 4px;
+    border-radius: 50%;
+  }
+  .half.note::after,
+  .quarter.note::after {
+    content: "";
+    height: 28px;
+    width: 1px;
+    background-color: black;
+    position: absolute;
+    top: -24px;
+    right: 0;
+  }
+  .half.note::before,
+  .quarter.note::before {
+    position: absolute;
+    content: "";
+    transform: rotatez(-15deg);
+    border-radius: 50%;
+  }
+  .half.note::before {
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-top-width: 2.18181818px;
+    border-bottom-width: 2.18181818px;
+  }
+  .quarter.note::before {
+    background-color: black;
+  }
+  .note.A4 {
+    top: 16px;
+  }
+  .note.B4 {
+    top: 12px;
+  }
+  .note.C4 {
+    top: 36px;
+  }
+  .note.D4 {
+    top: 32px;
+  }
+  .note.E4 {
+    top: 28px;
+  }
+  .note.F4 {
+    top: 24px;
+  }
+  .note.G4 {
+    top: 20px;
+  }
+  .note.A5 {
+    top: 16px;
+  }
+  .note.B5 {
+    top: 12px;
+  }
+  .note.C5 {
+    top: 8px;
+  }
+  .note.D5 {
+    top: 4px;
+  }
+  .note.E5 {
+    top: 0px;
+  }
+  .note.F5 {
+    top: -4px;
+  }
+  .note.G5 {
+    top: -8px;
+  }
+  .quarter.note.D5::after,
+  .half.note.D5::after,
+  .quarter.note.E5::after,
+  .half.note.E5::after,
+  .quarter.note.F5::after,
+  .half.note.F5::after,
+  .quarter.note.G5::after,
+  .half.note.G5::after {
+    top: 4px;
+  }
