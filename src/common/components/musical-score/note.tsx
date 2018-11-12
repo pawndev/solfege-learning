@@ -3,22 +3,21 @@ import { Component } from 'react';
 
 import { MusicalNote, Octave } from '../../../utils/note/type';
 
-interface DefaultProps {
+interface IDefaultProps {
   octave: Octave;
 }
 
-interface Props {
+interface IProps {
   name: MusicalNote;
   octave?: Octave;
 }
-interface State {}
 
-export default class Note extends Component<Props, State> {
-  static defaultProps: DefaultProps = {
+export default class Note extends Component<IProps, {}> {
+  public static defaultProps: IDefaultProps = {
     octave: 4
   };
 
-  render() {
+  public render() {
     return <div className={`quarter note ${this.props.name}${this.props.octave}`} />;
   }
 }

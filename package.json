@@ -5,8 +5,10 @@
   "main": "./dist/main.bundle.js",
   "scripts": {
     "start": "electron ./dist/main.bundle.js",
-    "dev": "rimraf dist && webpack --watch --config ./webpack.dev.js --progress --colors",
-    "prod": "rimraf dist && webpack --config ./webpack.prod.js --progress --colors"
+    "watch": "rimraf dist && webpack --watch --config ./webpack.dev.js --progress --colors",
+    "dev": "rimraf dist && webpack --config ./webpack.dev.js --progress --colors",
+    "prod": "rimraf dist && webpack --config ./webpack.prod.js --progress --colors",
+    "test": "tslint -c tslint.json 'src/**/*.ts?(x)'"
   },
   "keywords": [],
   "author": "",
@@ -23,6 +25,7 @@
   },
   "devDependencies": {
     "@types/react-dom": "^16.0.9",
+    "@types/tone": "git+https://github.com/Tonejs/TypeScript.git",
     "css-loader": "^1.0.1",
     "electron": "3.0.8",
     "file-loader": "^2.0.0",
@@ -33,6 +36,9 @@
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
     "ts-loader": "^5.3.0",
+    "tslint": "5.11.0",
+    "tslint-config-prettier": "^1.15.0",
+    "tslint-react": "^3.6.0",
     "typescript": "^3.1.6",
     "webpack": "^4.25.1",
     "webpack-cli": "^3.1.2"

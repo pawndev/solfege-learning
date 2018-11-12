@@ -10,12 +10,10 @@ import Menu from '../pages/menu/index';
 render(
   <BrowserRouter>
     <Fragment>
-      <div>
-        {window.location.pathname.includes('index.html') && <Redirect to="/" />}
-      </div>
+      {window.location.pathname.includes('index.html') && <Redirect to="/" />}
       <Switch>
-        <Route component={Home} exact path="/home"/>
-        <Route component={Menu} exact path="/" />
+        <Route component={Home} exact={true} path="/home"/>
+        <Route component={Menu} exact={true} path="/" />
         <Route component={Home} />
       </Switch>
     </Fragment>

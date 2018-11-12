@@ -1,0 +1,14 @@
+{
+    "defaultSeverity": "error",
+    "extends": [
+        "tslint:recommended",
+        "tslint-react",
+        "tslint-config-prettier"
+    ],
+    "jsRules": {},
+    "rules": {
+      "no-require-imports": false,
+      "variable-name": [true, "allow-snake-case", "allow-pascal-case", "allow-leading-underscore"]
+    },
+    "rulesDirectory": []
+}
