@@ -4,14 +4,14 @@ import { Component } from 'react';
 import { MusicalNote, Octave } from '../../../utils/note/type';
 
 interface DefaultProps {
-  octave: Octave
-};
+  octave: Octave;
+}
 
 interface Props {
-  name: MusicalNote,
-  octave?: Octave
-};
-interface State {};
+  name: MusicalNote;
+  octave?: Octave;
+}
+interface State {}
 
 export default class Note extends Component<Props, State> {
   static defaultProps: DefaultProps = {
@@ -19,6 +19,6 @@ export default class Note extends Component<Props, State> {
   };
 
   render() {
-    return <div className={`quarter note ${this.props.name}${this.props.octave}`}  />
+    return <div className={`quarter note ${this.props.name}${this.props.octave}`} />;
   }
 }
