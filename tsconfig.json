@@ -7,8 +7,12 @@
     "noImplicitAny": true,
     "noImplicitThis": true,
     "sourceMap": true,
-    "target": "es2017"
+    "target": "es2017",
+    "typeRoots" : ["./src/@types"]
   },
+  "include": [
+    "src/**/*"
+  ],
   "exclude": [
     "node_modules"
   ]
